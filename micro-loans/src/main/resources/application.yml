@@ -1,9 +1,10 @@
 server:
   port: 8090
 spring:
-
+  application:
+    name: "loans"
   profiles:
-    active: "qa"
+    active: "default"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -17,23 +18,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
   config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
+    import: "optional:configserver:http://localhost:8071/"
 
 
-
-
-build:
-  version: "v3"
-
-accounts:
-  message: "welcome to loans Microservice"
-  contactDetails:
-    email: "thodsareaditya@gmail.com"
-    mobileNumber: "1234567890"
-  callSupport:
-    - "thodsareaditya@gmail.com"
-    - "1234567890"
