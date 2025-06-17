@@ -1,0 +1,37 @@
+#server:
+#  port: 8090
+#spring:
+#
+#  profiles:
+#    active: "qa"
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: ''
+#  h2:
+#    console:
+#      enabled: true
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#
+#  config:
+#    import:
+#      - "loans-qa.yml"
+#      - "loans-prod.yml"
+#
+
+build:
+  version: "v3"
+
+accounts:
+  message: "welcome to loans Microservice"
+  contactDetails:
+    email: "thodsareaditya@gmail.com"
+    mobileNumber: "1234567890"
+  callSupport:
+    - "thodsareaditya@gmail.com"
+    - "1234567890"
